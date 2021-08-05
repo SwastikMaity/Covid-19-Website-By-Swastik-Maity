@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Corona Testing</title>
+  <!-- link stylesheet file -->
+  <link rel="stylesheet" href="./stylesheets/formStyle.css">
+</head>
+
+<body>
+  <!-- Navigation Bar with menu items -->
+  <div id="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="coronatesting.html">Corona Testing</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Heading on top of the form -->
+  <div class="regform">
+    <h1>Information Form</h1>
+  </div>
+
+  <!-- Main form -->
+  <div class="main">
+    <form id="testForm">
+      <!-- input elements of the form -->
+      <div id="name">
+        <h2 class="name">Name</h2>
+        <input id="firstname" type="text" required name="first_name" placeholder="Ex:Ankush"><br>
+        <label id="firstlabel"> first name</label>
+       <input id="lastname" type="text" required name="last_name" placeholder="Ex:Sen"><br>
+        <label id="lastlabel"> last name</label>
+      </div>
+
+      
+      <!-- add more form elements here -->
+
+      <h2 class="name"> Profession</h2>
+        <input id="profession" type="text" name="profession" placeholder="student/doctor/teacher">
+
+        <h2 class="name"> Email</h2>
+        <input id="email" type="text" name="email" placeholder="Ex:ankush.sen19@gmail.com">
+
+        <h2 class="name">Date Of Birth</h2>
+      <input id="dateofbirth" type="date" required name="dateofbirth">
+
+      <h2 class="name">Mobile Number</h2>
+      <input id="mobile" type="text" name="mobile" required pattern="[789][0-9]{9}" placeholder="Ex:9674571452">
+
+      <h2 class="name"> State</h2>
+      <select id="state" name="state">
+        <option disabled="disabled" required selected="selected">--choose</option>
+        <option>Assam</option>
+        <option>Delhi</option>
+        <option>Gujrat</option>
+        <option>Madhya Pradesh</option>
+        <option>West Bengal</option>
+        <option>Others</option>
+      </select>
+
+      <h2 id="travel"> Have you travelled to COVID affected country within last 1 month?</h2>
+      <div id="travel">
+        <input type="radio" name="option" value="Yes"> Yes
+        <input type="radio" name="option" value="No" checked="checked"> No
+      </div>
+
+      <h2 id="symptoms">Do you have any of the following symptoms ?</h2>
+      <div class="arrange">
+        <input type="checkbox" name="symptoms" value="Fever" id="cb1">
+        <label for="cb1">Fever</label><br>
+        <input type="checkbox" name="symptoms" value="Dry Cough" id="cb2">
+        <label for="cb2">Dry Cough</label><br>
+        <input type="checkbox" name="symptoms" value="Cold" id="cb3">
+        <label for="cb3">Cold</label><br>
+        <input type="checkbox" name="symptoms" value="Breathing Issues" id="cb4">
+        <label for="cb3">Breathing Issues</label><br>
+        <input type="checkbox" name="symptoms" value="Chest Pain" id="cb5">
+        <label for="cb3">Chest Pain</label><br>
+      </div>
+
+            
+      
+      <input id="submit" type="submit">
+
+      <h2 id="centers"> Testing Centres around you: <span id="result"></span><br>
+       
+        
+        
+    </form>
+  </div>
+
+  <!-- add script files -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+  <!-- add script files --> 
+  <script src="./scripts/testingScript.js"></script>
+  
+
+</body>
+
+</html>
