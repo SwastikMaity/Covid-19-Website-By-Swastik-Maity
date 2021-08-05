@@ -1,1 +1,1 @@
-# Covid-19-Website-By-Swastik-Maity
+# COVID-19-Website
